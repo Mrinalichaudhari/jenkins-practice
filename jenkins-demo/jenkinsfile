@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Test') {
+            steps {
+                sh 'echo "pipeline is working"'
+                sh 'date'
+                sh 'whoami'
+                sh 'hostname'
+            }
+        }
+    }
+}
