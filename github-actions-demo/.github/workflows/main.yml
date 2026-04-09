@@ -1,0 +1,23 @@
+name: My First GitHub Action
+
+on: push
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print message
+        run: echo "Hello Kiran, GitHub Actions is working"
+
+      - name: Show date
+        run: date
+
+      - name: Show Python version
+        run: python3 --version
+
+      - name: Run Python file
+        run: python3 app.py
